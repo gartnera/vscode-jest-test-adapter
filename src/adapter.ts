@@ -142,12 +142,12 @@ export default class JestTestAdapter implements TestAdapter {
     if (testFilter) {
       if (testFilter.testFileNamePattern) {
         args.push("--testPathPattern");
-        args.push(testFilter.testFileNamePattern);
+        args.push(`"${testFilter.testFileNamePattern}"`);
       }
 
       if (testFilter.testNamePattern) {
         args.push("--testNamePattern");
-        args.push(testFilter.testNamePattern);
+        args.push(`"${testFilter.testNamePattern}"`);
       }
     }
 

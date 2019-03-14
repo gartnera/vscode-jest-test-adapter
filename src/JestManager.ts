@@ -74,11 +74,11 @@ export default class JestManager {
       shell: useShell,
       testFileNamePattern:
         testFilter && testFilter.testFileNamePattern
-          ? `"${testFilter.testFileNamePattern}"`
+          ? `${testFilter.testFileNamePattern}`
           : undefined,
       testNamePattern:
         testFilter && testFilter.testNamePattern
-          ? `"${testFilter.testNamePattern.replace(/"/g, '\\"')}"`
+          ? `${testFilter.testNamePattern.replace(/"/g, '\\"')}`
           : undefined,
     };
 
